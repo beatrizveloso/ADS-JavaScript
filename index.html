@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercícios</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <form>
+    <!-- 1 - Soma de dois números -->
         <h1> Número 1 </h1>
         <input type="text" size="10" id="num1" placeholder="Digite número ">
-            <br>        
-            <br>
         <h1> Número 2 </h1>
         <input type="text" size="10" id="num2" placeholder="Digite número ">
-            <br>
-            <br>
-         <h1> Resultado </h1>
-         <input type="text" size="=10" id="res"> 
-            <br>
-            <br>
-        <input type="button" value="res" onclick="soma()">   
-    </form>
-
+        <h1> Resultado </h1>
+        <input type="text" size="=10" id="res">
+        <input type="button" value="Resultado" onclick="soma()">
     <br>
     <br>
 
-        <h1>Verificar se o número é Par ou Ímpar</h1>
-        <input type="number" id="num" placeholder="Digite um número">
-        <button onclick="verificarParImpar()">Verificar</button>
-        <p id="resultado"></p>
-    
-        <script>
-            function verificarParImpar() {
-                let numero = document.getElementById('num').value;
-                if (numero % 2 === 0) {
-                    document.getElementById('resultado').innerText = "O número é par";
-                } else {
-                    document.getElementById('resultado').innerText = "O número é ímpar";
-                }
-            }
-        </script>
-        
-    
+    <!-- 2 - Verificar se um número é par ou ímpar -->
+    <h1>Verificar se o número é Par ou Ímpar</h1>
+    <input type="number" id="num" placeholder="Digite um número">
+    <button onclick="verificarParImpar()">Verificar</button>
+    <p id="resultado"></p>
+
+
+    <!-- 3 - Tabuada de um número -->
+    <h1>Tabuada de um Número</h1>
+    <input type="number" id="num" placeholder="Digite um número">
+    <button onclick="Tabuada()">Gerar Tabuada</button>
+    <ul id="resultadoTabuada"></ul>
+
+    <!-- 4 - Inverter uma string -->
+    <h1>Inverter uma String</h1>
+    <input type="text" id="texto" placeholder="Digite uma palavra">
+    <button onclick="inverterString()">Inverter</button>
+    <p id="resultadoString"></p>
+
+    <!-- 5 - Calcular o fatorial de um número -->
+    <h1>Calculadora de Fatorial</h1>
+    <input type="number" id="num" placeholder="Digite um número">
+    <button onclick="calcularFat()">Calcular Fatorial</button>
+    <p id="resultadoFat"></p>
+
+    <!-- 6 - Gerar um número aleatório entre 1 e 100 -->
+    <h1>Gerar Número Aleatório</h1>
+    <button onclick="gerarAleatorio()">Gerar Número</button>
+    <p id="resulAleatorio"></p>
+
+    <!-- 7 - Verificar se uma palavra é um palíndromo -->
+    <h1>Verificar se uma palavra é um palíndromo</h1>
+    <input type="text" id="palavraInput" placeholder="Digite uma palavra" />
+    <button onclick="verificarPalindromo()">Verificar</button>
+    <p id="palindromoResult"></p>
+
+    <!-- 8 - Encontrar o maior número em um array -->
+    <h1>Encontrar o maior número em um array</h1>
+    <input type="text" id="numerosArrayInput" placeholder="Digite números separados por vírgula" />
+    <button onclick="encontrarMaiorNumero()">Encontrar Maior Número</button>
+    <p id="maiorNumeroResult"></p>
+
+    <!-- 9 - Contar vogais de em uma string -->
+    <h1>Contar vogais em uma string</h1>
+    <input type="text" id="stringInput" placeholder="Digite uma string" />
+    <button onclick="contarVogais()">Contar Vogais</button>
+    <p id="vogaisResult"></p>
+
+    <!-- 10 - Soma dos números de um array -->
+    <h1>Soma dos números de um array</h1>
+    <input type="text" id="numerosSomaInput" placeholder="Digite números separados por vírgula" />
+    <button onclick="somaArray()">Somar</button>
+    <p id="somaResult"></p>
+
 
 
 
@@ -51,4 +82,5 @@
 
 </body>
 <script src="js/script.js"></script>
+
 </html>
