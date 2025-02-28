@@ -93,7 +93,15 @@ function contarVogais() {
 // 10 - Soma dos números de um array
 function somaArray() {
   const input = document.getElementById("numerosSomaInput").value;
-  const numeros = input.split(',').map(Number);
+  if (!input) {
+    document.getElementById("somaResult").textContent = "Por favor, digite números para somar.";
+    return;
+  }
+  const numeros = input.split(',').map(num => parseFloat(num.trim()));
+  if (numeros.some(isNaN)) {
+    document.getElementById("somaResult").textContent = "Por favor, insira apenas números válidos.";
+    return;
+  }
   const soma = numeros.reduce((acc, num) => acc + num, 0);
   document.getElementById("somaResult").textContent = `A soma dos números no array [${numeros}] é: ${soma}`;
 }
