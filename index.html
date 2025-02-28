@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <h1> Número 1 </h1>
+        <input type="text" size="10" id="num1" placeholder="Digite número ">
+            <br>        
+            <br>
+        <h1> Número 2 </h1>
+        <input type="text" size="10" id="num2" placeholder="Digite número ">
+            <br>
+            <br>
+         <h1> Resultado </h1>
+         <input type="text" size="=10" id="res"> 
+            <br>
+            <br>
+        <input type="button" value="res" onclick="soma()">   
+    </form>
+
+    <br>
+    <br>
+
+        <h1>Verificar se o número é Par ou Ímpar</h1>
+        <input type="number" id="num" placeholder="Digite um número">
+        <button onclick="verificarParImpar()">Verificar</button>
+        <p id="resultado"></p>
+    
+        <script>
+            function verificarParImpar() {
+                let numero = document.getElementById('num').value;
+                if (numero % 2 === 0) {
+                    document.getElementById('resultado').innerText = "O número é par";
+                } else {
+                    document.getElementById('resultado').innerText = "O número é ímpar";
+                }
+            }
+        </script>
+        
+    
+
+
+
+
+
+
+</body>
+<script src="js/script.js"></script>
+</html>
